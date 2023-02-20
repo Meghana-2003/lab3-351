@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+h2{
+    font-size: 30px;
+    color:crimson;
+    margin-left: 450px;
+}
+
+        </style>
+        <title>survey</title>
+
+
+    </head>
+    <body>
+        <h2>Please help us to know more about our customer service</h2>
+
+        <form action="submit.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+           
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+           
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" required>
+           
+            <label>Which of the following is your favorite item?</label>
+            <label><input type="radio" name="fruit" value="apple">watch</label>
+            <label><input type="radio" name="fruit" value="banana">water bottle</label>
+            <label><input type="radio" name="fruit" value="orange">shoe</label>
+           
+            <label for="comments">Any comments or suggestions?</label>
+            <textarea id="comments" name="comments" placeholder="Enter your comments or suggestions"></textarea>
+           
+            <label>How would you rate our service?</label>
+            <select id="rating" name="rating">
+              <option value="">Select a rating</option>
+              <option value="excellent">Excellent</option>
+              <option value="good">Good</option>
+              <option value="average">Average</option>
+              <option value="poor">Poor</option>
+            </select>
+           
+            <input type="submit" value="Submit">
+          </form>
+
+    </body>
+</html>
